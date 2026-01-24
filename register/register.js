@@ -40,7 +40,7 @@ form.addEventListener('submit', function(event) {
     if (validation) {
         saveUser()
         alert("Cadastrado com sucesso!");
-        window.location.href = "../login/index.html";
+        window.location.href = "../index.html";
     }
 
 });
