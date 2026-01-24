@@ -11,36 +11,42 @@
     <link rel="stylesheet" href="./register.css">
 </head>
 <body>
-    <form>
-        <h1>Wellcome...</h1>
-        <div>
-        <input type="text" class="form-control" id="name" placeholder="Full name*" required>
-        </div>
-        <div>
-        <input type="email" class="form-control" id="email" placeholder="Email*" required>
-        </div>
-        <div>
-        <input type="text" class="form-control" id="user" placeholder="Username*" required>
-        </div>
-        <div>
-            <select class="form-control" id="gender" required>
-                <option value="" disabled selected>Select gender*</option>
-                <option value="m">Male</option>
-                <option value="f">Female</option>
-                <option value="o">Other</option>
-            </select>
-        </div>
-        <div>
-        <input type="password" class="form-control" id="password" placeholder="Password*" required>
-        </div>
-        <div>
-        <input type="password" class="form-control" id="confirm_password" placeholder="Confirm your password*" required>
-        </div>
-        <div class="alert alert-warning" role="alert" id="alert" style="display: none;">
-        Incorrect password!
-        </div>
-        <button type="submit" class="submit_btn" id="register">Register</button>
-    </form>
+    <main>
+        <form>
+            <h1>Wellcome...</h1>
+            <div>
+            <input type="text" class="form-control" id="name" placeholder="Full name*" required>
+            </div>
+            <div>
+            <input type="email" class="form-control" id="email" placeholder="Email*" required>
+            </div>
+            <div>
+            <input type="text" class="form-control" id="user" placeholder="Username*" required>
+            </div>
+            <div>
+                <select class="form-control" id="gender" required>
+                    <option value="" disabled selected>Select gender*</option>
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                    <option value="o">Other</option>
+                </select>
+            </div>
+            <div>
+            <input type="password" class="form-control" id="password" placeholder="Password*" required>
+            </div>
+            <div>
+            <input type="password" class="form-control" id="confirm_password" placeholder="Confirm your password*" required>
+            </div>
+            <div class="alert alert-warning" role="alert" id="alert" style="display: none;">
+            Incorrect password!
+            </div>
+            <button type="submit" class="submit_btn" id="register">Register</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Made by <a href="https://github.com/joao-assoni" class="github_link" target="_blank">João Assoni.</a></p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./register.js"></script>
