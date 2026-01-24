@@ -20,7 +20,7 @@ form.addEventListener('submit', function(event) {
 
 
     if (findUser) {
-        alert("Wellcome back, " + findUser.name + "!");
+        window.location.href = "../home/home.html";
 
     } else {
         alert("User or password are incorect!");
