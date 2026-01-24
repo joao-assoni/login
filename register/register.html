@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Login.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Fira+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../login/index.css">
+</head>
+<body>
+    <form>
+        <h1>login.</h1>
+        <div>
+        <input type="text" class="form-control" id="name" placeholder="Full name*" required>
+        </div>
+        <div>
+        <input type="email" class="form-control" id="email" placeholder="Email*" required>
+        </div>
+        <div>
+        <input type="text" class="form-control" id="user" placeholder="Username*" required>
+        </div>
+        <div>
+            <select class="form-control" id="gender" required>
+                <option value="" disabled selected>Select gender*</option>
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+                <option value="o">Other</option>
+            </select>
+        </div>
+        <div>
+        <input type="password" class="form-control" id="password" placeholder="Password*" required>
+        </div>
+        <div>
+        <input type="password" class="form-control" id="confirm_password" placeholder="Confirm your password*" required>
+        </div>
+        <button type="submit" class="submit_btn" id="register">Register</button>
+    </form>
+</body>
+</html>
