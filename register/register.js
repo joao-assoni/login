@@ -1,29 +1,52 @@
 const form = document.querySelector('form');
 
-
-function saveUser () {
-
-    const newUser = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        user: document.getElementById("user").value,
-        gender: document.getElementById("gender").value,
-        password: document.getElementById("password").value
+class User {
+    constructor(name,email,user,gender,password) {
+        this.name=name;
+        this.email=email;
+        this.user=user;
+        this.gender=gender;
+        this.password=password;
     }
-    let usersList = JSON.parse(localStorage.getItem('registred_users') || '[]');
+}
 
-    usersList.push(newUser);
+class UserManeger {
+    constructor() {
+        this.storageKey = 'registred_users';
+    }
 
-    localStorage.setItem('registred_users', JSON.stringify(usersList));
+    getUsers() {
+        return JSON.parse(localStorage.getItem(this.storageKey) || '[]');
+    }
+
+    save(userObj) {
+        const usersList = this.getUsers();
+        usersList.push(userObj);
+        localStorage.setItem(this.storageKey, JSON.stringify(usersList));
+    }
+}
+
+function saveUser() {
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const user = document.getElementById("user").value;
+    const gender = document.getElementById("gender").value;
+    const password = document.getElementById("password").value;
+
+    const newUser = new User(name, email, user, gender, password);
+
+    const maneger = new UserManeger();
+    maneger.save(newUser);
 
 }
 
 function confirm_pswd () {
     let password = document.getElementById("password").value;
-    let conf_password = document.getElementById("confirm_password").value;
+    let confirm_password = document.getElementById("confirm_password").value;
     let alert = document.getElementById("alert");
 
-    if (password !== conf_password) {
+    if (password !== confirm_password) {
         alert.style.display="block";
         return false;
     } else {
